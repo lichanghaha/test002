@@ -1,0 +1,1610 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="spm-id" content="a216r">
+    <link href="favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link  href="css/index.css" type="text/css" rel="stylesheet">
+    <script src="js/jquery-1.12.2.js"></script>
+    <script src="js/seed.js"></script>
+    <script>
+        //猜你喜欢
+        $(function() {
+            //鼠标进入，当前div有cover，兄弟变none
+            $(".caibox").mouseover(function() {
+                //其他隐藏
+                $(this).siblings(".caibox > .cover").css("display","none");
+                //当前显示
+                $(this).find(".cover").css("display","block");
+            });
+            //鼠标移开 恢复隐藏
+            $(".caibox").mouseout(function() {
+                $(".caibox >.cover").css("display","none");
+            });
+        });
+        //列表
+        $(function () {
+            //获取.menu-list中的li,注册鼠标进入和离开的事件
+            $(".menu-list>li").mouseover(function () {
+                //鼠标进入
+                $(this).children(".specialmore").stop().show(100);//显示
+            });
+            $(".menu-list>li").mouseout(function () {
+                //鼠标离开
+                $(this).children(".specialmore").stop().hide(100);//显示
+            });
+            //.stop()方法用来停止动画
+        });
+        //top列表
+        $(function () {
+            //获取.menu-list中的li,注册鼠标进入和离开的事件
+            $(".top1>li").mouseover(function () {
+                //鼠标进入
+                $(this).children("ul").stop().show(100);//显示
+            });
+            $(".top1>li").mouseout(function () {
+                //鼠标离开
+                $(this).children("ul").stop().hide(100);//显示
+            });
+            //.stop()方法用来停止动画
+        });
+        //change
+        $(function () {
+            var old1 = true;
+            //获取.wrap下面的ul中的li,注册鼠标进入和离开的事件
+            $(".laozihao>.changeBtn").click(function change () {
+                //鼠标进入
+                if(old1){
+                    old1=false;
+                    $(".old-old").stop().hide();//显示
+                    $(".old-old2").stop().show();
+                }else{
+                    old1=true;
+                    $(".old-old").stop().show();//显示
+                    $(".old-old2").stop().hide();
+                }
+                return false;
+            });
+            //.stop()方法用来停止动画
+        });
+        //热门城市
+        $(function () {
+            //获取.menu-list中的li,注册鼠标进入和离开的事件
+            $(".citys").mouseover(function () {
+                //鼠标进入
+                $(this).find(".cover").stop().hide();//显示
+            });
+            $(".citys").mouseout(function () {
+                //鼠标离开
+                $(this).find(".cover").stop().show();//显示
+            });
+            //.stop()方法用来停止动画
+        });
+    </script>
+    <title>淘宝 - 特色中国，再一次发现中国！发现最正宗的特色、美食、工艺品、老字号。</title>
+</head>
+<body>
+    <div class="top">
+        <div class="bx-t">
+            <div  class="top-l">
+                <a href="#" class="h">亲，请登录</a>
+                <a href="#" >免费注册</a>
+                <a href="#" class="ph">手机逛淘宝</a>
+            </div>
+            <div class="top-r">
+                <ul class="top1">
+                    <li class="menu-hd">
+                        <a href="../淘宝--顾文浩/index.html">淘宝网首页</a>
+                    </li>
+                    <li class="my-taobao">
+                        <a href="#">我的淘宝 <img src="images/huangxia.png" alt=""/></a>
+                        <ul class="topu1">
+                            <li><a href="#">(‧ ‧)nnn我是一只毛虫</a></li>
+                            <li><a href="#">(:◎)≡我是一只章鱼</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="icona">购物车</a>
+                        <ul class="topu1">
+                            <li><a href="#">没钱买，扎心了老铁</a></li>
+                            <li><a href="#"><□:≡我是一只乌贼</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="iconb">收藏夹</a>
+                        <ul class="topu1">
+                            <li><a href="#">✿咿呀咿呀哟</a></li>
+                            <li><a href="#">✿大王叫我来巡山</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">商品分类 <img src="images/huangxia.png" alt=""/></a>
+                        <ul class="topu1">
+                            <li><a href="#">❤买得起的</a></li>
+                            <li><a href="#">❤买不起的</a></li>
+                        </ul>
+                    </li>
+                    <li class="mjzx">
+                        <a href="#">卖家中心 <img src="images/huangxia.png" alt=""/></a>
+                        <ul class="topu1">
+                            <li><a href="#">嘀！个人中心</a></li>
+                            <li><a href="#">咚！账了个户</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">联系客服 <img src="images/huangxia.png" alt=""/></a>
+                        <ul class="topu1">
+                            <li><a href="#">❀客服姐姐</a></li>
+                            <li><a href="#">❀没上班耶</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">网站导航 <img src="images/huangxia.png" alt=""/></a>
+                        <ul class="topu1">
+                            <li><a href="#">✿这没心情写</a></li>
+                            <li><a href="#">❤不要逼我T T</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--logo开始-->
+    <div class="china-head">
+        <div class="logopart ">
+            <div class = "bx-logo clearfix">
+                <div class="logo clearfix">
+                    <a href="#">
+                        <img src="images/tb183-270-41.png" alt="特色中国"/>
+                    </a>
+                </div>
+                <div class="head-search">
+                    <input placeholder="搜索未知的中国特色" type="text"/>
+                    <button class="search-btn" type="submit">搜特色</button>
+                </div>
+            </div>
+            <div class="erweima">
+                <img src="images/tb1erweima242-108.png" alt="搜索二维码"/>
+            </div>
+        </div>
+        <div class="head-nav-bx ">
+            <div class="market-wrap ">
+                <a href="#" class="special">特色大全
+                    <span>全部
+                        <img src="images/tb162-8-12.png" />
+                    </span>
+                </a>
+                <a href="#" class="shouye">首页</a>
+                <a href="#">城市大全</a>
+                <a href="#">农家乐</a>
+                <a href="#">老字号</a>
+                <a href="#">手工艺</a>
+            </div>
+            <div class="detail">
+                <ul class="menu-list">
+                    <li class="menu-son">
+                        <img src="images/tb162-8-12.png"  class="icon"/>
+                        <span class="arrow"></span>
+                        <i class="zbys"></i>
+                        <div class="menu-links">
+                            <a href="#" class="l-parent">滋补养生</a>
+                            <div class="sons">
+                                <a href="#" class="son1">铁棍山药</a>
+                                <a href="#" class="son1">罗布麻茶</a>
+                                <a href="#" class="son1">冬凌草</a>
+                            </div>
+                        </div>
+                        <div class="specialmore">
+                            <div class="ss ">
+                                <div class="sm1">
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">秋梨膏</a></dd>
+                                        <dd><a href="#">石斛</a></dd>
+                                        <dd><a href="#">冬虫夏草</a></dd>
+                                        <dd><a href="#">东阿阿胶</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">秋梨膏</a></dd>
+                                        <dd><a href="#">石斛</a></dd>
+                                        <dd><a href="#">冬虫夏草</a></dd>
+                                        <dd><a href="#">东阿阿胶</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">秋梨膏</a></dd>
+                                        <dd><a href="#">石斛</a></dd>
+                                        <dd><a href="#">冬虫夏草</a></dd>
+                                        <dd><a href="#">东阿阿胶</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">鹤顶红</a></dd>
+                                        <dd><a href="#">敌敌畏</a></dd>
+                                        <dd><a href="#">鬼见愁</a></dd>
+                                        <dd><a href="#">一日丧命散</a></dd>
+                                        </dt>
+                                    </dl>
+                                </div>
+                                <div class="sm2">
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">花儿</a></dd>
+                                        <dd><a href="#">为什么</a></dd>
+                                        <dd><a href="#">这样红</a></dd>
+                                        <dd><a href="#">哈哈哈</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">其实</a></dd>
+                                        <dd><a href="#">我也</a></dd>
+                                        <dd><a href="#">不知道</a></dd>
+                                        <dd><a href="#">一丈红</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">秋梨膏</a></dd>
+                                        <dd><a href="#">石斛</a></dd>
+                                        <dd><a href="#">冬虫夏草</a></dd>
+                                        <dd><a href="#">东阿阿胶</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">秋梨膏</a></dd>
+                                        <dd><a href="#">石斛</a></dd>
+                                        <dd><a href="#">冬虫夏草</a></dd>
+                                        <dd><a href="#">东阿阿胶</a></dd>
+                                        </dt>
+                                    </dl>
+
+                                </div>
+                                <div class="sm3">
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">我写到这里</a></dd>
+                                        <dd><a href="#">已经不想写</a></dd>
+                                        <dd><a href="#">我都写了</a></dd>
+                                        <dd><a href="#">些什么</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">我现在啊</a></dd>
+                                        <dd><a href="#">一脸</a></dd>
+                                        <dd><a href="#">一脸懵逼</a></dd>
+                                        <dd><a href="#">的状态</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">大王叫我</a></dd>
+                                        <dd><a href="#">来巡山呐</a></dd>
+                                        <dd><a href="#">巡完南山</a></dd>
+                                        <dd><a href="#">巡北山</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">狐狸精</a></dd>
+                                        <dd><a href="#">座山雕</a></dd>
+                                        <dd><a href="#">大马哈鱼</a></dd>
+                                        <dd><a href="#">长颈鹿</a></dd>
+                                        </dt>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-son">
+                        <img src="images/tb162-8-12.png" alt="" class="icon"/>
+                        <span class="arrow"></span>
+                        <i class="jjsp"></i>
+                        <div class="menu-links">
+                            <a href="#" class="l-parent">家居饰品</a>
+                            <div class="sons">
+                                <a href="#" class="son1">云南藤编</a>
+                                <a href="#" class="son1">嘉祥石雕</a>
+                                <a href="#" class="son1">越南红木</a>
+                            </div>
+                        </div>
+                        <div class="specialmore ssmall">
+                            <div class="ss">
+                                <div class="sm1">
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">沙发</a></dd>
+                                        <dd><a href="#">沙发</a></dd>
+                                        <dd><a href="#">沙发</a></dd>
+                                        <dd><a href="#">沙发</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">床 </a></dd>
+                                        <dd><a href="#">床 </a></dd>
+                                        <dd><a href="#">床</a></dd>
+                                        <dd><a href="#">床</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">衣柜</a></dd>
+                                        <dd><a href="#">衣柜 </a></dd>
+                                        <dd><a href="#">衣柜</a></dd>
+                                        <dd><a href="#">衣柜</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">餐桌</a></dd>
+                                        <dd><a href="#">餐桌 </a></dd>
+                                        <dd><a href="#">餐桌</a></dd>
+                                        <dd><a href="#">餐桌</a></dd>
+                                        </dt>
+                                    </dl>
+                                </div>
+                                <div class="sm2">
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">锅碗瓢盆</a></dd>
+                                        <dd><a href="#">毛巾洗漱</a></dd>
+                                        <dd><a href="#">牙刷牙膏</a></dd>
+                                        <dd><a href="#">不知道了</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">想吃肉了</a></dd>
+                                        <dd><a href="#">你们想看</a></dd>
+                                        <dd><a href="#">胸口碎大石么</a></dd>
+                                        <dd><a href="#">组长会哦！</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">10块钱一位</a></dd>
+                                        <dd><a href="#">您买不了吃亏</a></dd>
+                                        <dd><a href="#">也买不了</a></dd>
+                                        <dd><a href="#">上当</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">秋梨膏</a></dd>
+                                        <dd><a href="#">石斛</a></dd>
+                                        <dd><a href="#">冬虫夏草</a></dd>
+                                        <dd><a href="#">东阿阿胶</a></dd>
+                                        </dt>
+                                    </dl>
+
+                                </div>
+                                <div class="sm3">
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">秋梨膏</a></dd>
+                                        <dd><a href="#">石斛</a></dd>
+                                        <dd><a href="#">冬虫夏草</a></dd>
+                                        <dd><a href="#">东阿阿胶</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">秋梨膏</a></dd>
+                                        <dd><a href="#">石斛</a></dd>
+                                        <dd><a href="#">冬虫夏草</a></dd>
+                                        <dd><a href="#">东阿阿胶</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">编不下去了</a></dd>
+                                        <dd><a href="#">太费脑子了</a></dd>
+                                        <dd><a href="#">不知道写啥</a></dd>
+                                        <dd><a href="#">就这样吧</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">咻咻咻</a></dd>
+                                        <dd><a href="#">大闸蟹</a></dd>
+                                        <dd><a href="#">皮皮虾</a></dd>
+                                        <dd><a href="#">我们走</a></dd>
+                                        </dt>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-son">
+                        <img src="images/tb162-8-12.png" alt="" class="icon"/>
+                        <span class="arrow"></span>
+                        <i class="sgy"></i>
+                        <div class="menu-links">
+                            <a href="#" class="l-parent">特色手工艺</a>
+                            <div class="sons">
+                                <a href="#" class="son1">云锦框画</a>
+                                <a href="#" class="son1">兔儿爷</a>
+                                <a href="#" class="son1">留青竹刻</a>
+                            </div>
+                        </div>
+                        <div class="specialmore ssmall">
+                            <div class="ss">
+                                <div class="sm1">
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">毛猴</a></dd>
+                                        <dd><a href="#">毛猴</a></dd>
+                                        <dd><a href="#">毛猴</a></dd>
+                                        <dd><a href="#">毛猴</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">脸谱 </a></dd>
+                                        <dd><a href="#">脸谱 </a></dd>
+                                        <dd><a href="#">脸谱</a></dd>
+                                        <dd><a href="#">脸谱</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">苏绣</a></dd>
+                                        <dd><a href="#">苏绣 </a></dd>
+                                        <dd><a href="#">苏绣</a></dd>
+                                        <dd><a href="#">苏绣</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">剪纸</a></dd>
+                                        <dd><a href="#">剪纸 </a></dd>
+                                        <dd><a href="#">剪纸</a></dd>
+                                        <dd><a href="#">剪纸</a></dd>
+                                        </dt>
+                                    </dl>
+                                </div>
+                                <div class="sm2">
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">大石碎胸口</a></dd>
+                                        <dd><a href="#">大石碎胸口</a></dd>
+                                        <dd><a href="#">大石碎胸口</a></dd>
+                                        <dd><a href="#">大石碎胸口</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">编不出来了</a></dd>
+                                        <dd><a href="#">编不出来了</a></dd>
+                                        <dd><a href="#">编不出来了</a></dd>
+                                        <dd><a href="#">编不出来了</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">苗绣</a></dd>
+                                        <dd><a href="#">苗绣</a></dd>
+                                        <dd><a href="#">苗绣</a></dd>
+                                        <dd><a href="#">苗绣</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">啥啥啥</a></dd>
+                                        <dd><a href="#">编不出来了</a></dd>
+                                        <dd><a href="#">自己百度吧</a></dd>
+                                        <dd><a href="#">就这样吧</a></dd>
+                                        </dt>
+                                    </dl>
+
+                                </div>
+                                <div class="sm3">
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">秋梨膏</a></dd>
+                                        <dd><a href="#">石斛</a></dd>
+                                        <dd><a href="#">冬虫夏草</a></dd>
+                                        <dd><a href="#">东阿阿胶</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">秋梨膏</a></dd>
+                                        <dd><a href="#">石斛</a></dd>
+                                        <dd><a href="#">冬虫夏草</a></dd>
+                                        <dd><a href="#">东阿阿胶</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">秋梨膏</a></dd>
+                                        <dd><a href="#">石斛</a></dd>
+                                        <dd><a href="#">冬虫夏草</a></dd>
+                                        <dd><a href="#">东阿阿胶</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">秋梨膏</a></dd>
+                                        <dd><a href="#">石斛</a></dd>
+                                        <dd><a href="#">冬虫夏草</a></dd>
+                                        <dd><a href="#">东阿阿胶</a></dd>
+                                        </dt>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-son">
+                        <img src="images/tb162-8-12.png" alt="" class="icon"/>
+                        <span class="arrow"></span>
+                        <i class="cha"></i>
+                        <div class="menu-links">
+                            <a href="#" class="l-parent">茶/冲饮</a>
+                            <div class="sons">
+                                <a href="#" class="son1">西湖藕粉</a>
+                                <a href="#" class="son1">苦荞茶</a>
+                                <a href="#" class="son1">酥油茶</a>
+                            </div>
+                        </div>
+                        <div class="specialmore ssmall small1">
+                            <div class="ss">
+                                <div class="sm1">
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">奶茶</a></dd>
+                                        <dd><a href="#">奶茶</a></dd>
+                                        <dd><a href="#">奶茶</a></dd>
+                                        <dd><a href="#">奶茶</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">西湖龙井 </a></dd>
+                                        <dd><a href="#">西湖龙井 </a></dd>
+                                        <dd><a href="#">西湖龙井</a></dd>
+                                        <dd><a href="#">西湖龙井</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">大碗茶</a></dd>
+                                        <dd><a href="#">大碗茶 </a></dd>
+                                        <dd><a href="#">大碗茶</a></dd>
+                                        <dd><a href="#">大碗茶</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">茶汤</a></dd>
+                                        <dd><a href="#">茶汤 </a></dd>
+                                        <dd><a href="#">茶汤</a></dd>
+                                        <dd><a href="#">茶汤</a></dd>
+                                        </dt>
+                                    </dl>
+                                </div>
+                                <div class="sm2">
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">酥油茶</a></dd>
+                                        <dd><a href="#">酥油茶</a></dd>
+                                        <dd><a href="#">酥油茶</a></dd>
+                                        <dd><a href="#">酥油茶</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">毛尖</a></dd>
+                                        <dd><a href="#">毛尖</a></dd>
+                                        <dd><a href="#">毛尖</a></dd>
+                                        <dd><a href="#">毛尖</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">北冰洋</a></dd>
+                                        <dd><a href="#">北冰洋</a></dd>
+                                        <dd><a href="#">北冰洋</a></dd>
+                                        <dd><a href="#">北冰洋</a></dd>
+                                        </dt>
+                                    </dl>
+                                    <dl>
+                                        <dt>
+                                        <dd><a href="#">啥啥啥</a></dd>
+                                        <dd><a href="#">编不出来了</a></dd>
+                                        <dd><a href="#">自己百度吧</a></dd>
+                                        <dd><a href="#">就这样吧</a></dd>
+                                        </dt>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-son">
+                        <img src="images/tb162-8-12.png" alt="" class="icon"/>
+                        <span class="arrow"></span>
+                        <i class="lytw"></i>
+                        <div class="menu-links">
+                            <a href="#" class="l-parent">粮油调味</a>
+                            <div class="sons">
+                                <a href="#" class="son1">黄油</a>
+                                <a href="#" class="son1">胡辣汤</a>
+                                <a href="#" class="son1">茶树菇</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-son">
+                        <img src="images/tb162-8-12.png" alt="" class="icon"/>
+                        <span class="arrow"></span>
+                        <i class="jiu"></i>
+                        <div class="menu-links">
+                            <a href="#" class="l-parent">美酒佳酿</a>
+                            <div class="sons">
+                                <a href="#" class="son1">孔府家酒</a>
+                                <a href="#" class="son1">绍兴黄酒</a>
+                                <a href="#" class="son1">八八坑道</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-son">
+                        <img src="images/tb162-8-12.png" alt="" class="icon"/>
+                        <span class="arrow"></span>
+                        <i class="sxgs"></i>
+                        <div class="menu-links">
+                            <a href="#" class="l-parent">生鲜果蔬</a>
+                            <div class="sons">
+                                <a href="#" class="son1">即食海参</a>
+                                <a href="#" class="son1">陕西苹果</a>
+                                <a href="#" class="son1">虾米</a>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="menu-son">
+                        <img src="images/tb162-8-12.png" alt="" class="icon"/>
+                        <span class="arrow"></span>
+                        <i class="xxls"></i>
+                        <div class="menu-links">
+                            <a href="#" class="l-parent">休闲零食</a>
+                            <div class="sons">
+                                <a href="#" class="son1">纸皮核桃</a>
+                                <a href="#" class="son1">新疆核桃</a>
+                                <a href="#" class="son1">牛轧糖</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+<!--banner-->
+    <div class="wrap-top">
+        <div class="lb-bx">
+            <div class = "all" id = "box">
+                <div class="screen">
+                    <ul>
+                        <li><img src="images/tblb1.jpg" width="714" hight = "450" /></li>
+                        <li><img src="images/lunbo2.jpg" width="714" hight = "450" /></li>
+                    </ul>
+                    <ol></ol>
+                </div>
+                <div id = "arr">
+                    <span id = "left">&lt;</span>
+                    <span id = "right">&gt;</span>
+                </div>
+            </div>
+            <div class="top-banner">
+                <div class="img-wrap">
+                    <a href="#">
+                        <img src="images/tbyoubian.jpg" alt=""/>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--main-->
+    <div class="wrap-main clearfix">
+        <div class="main-bx">
+            <div class="head">
+                <h1>
+                    <img src="images/tb1zxkg237-18.png"/>
+                </h1>
+            </div>
+            <div class="contentbox clearfix">
+                <div class="content-1 clearfix">
+                    <a href="#" class="img">
+                        <img src="images/tb1lc226-82.jpg"/>
+                        <div class="lccover">
+                            <span class="name">聊城馆</span>
+                        </div>
+                    </a>
+                    <div class="spec">
+                        <a href="#" class="hot">丁马甲鱼</a>
+                        <a href="#">五更炉熏鸡</a>
+                        <a href="#" class="hot">清平空心面</a>
+                        <a href="#">博山酥锅</a>
+                        <a href="#">高唐驴肉</a>
+                    </div>
+                </div>
+                <div class="content-1 clearfix">
+                    <a href="#" class="img">
+                        <img src="images/tb1zjk-226-82.jpg"/>
+                        <div class="zjkcover">
+                            <span class="name">张家口馆</span>
+                        </div>
+                    </a>
+                    <div class="spec">
+                        <a href="#" class="hot">张北莜麦</a>
+                        <a href="#" class="hot">柴沟堡熏肉</a>
+                        <a href="#" >张家口莜面</a>
+                        <a href="#">糊糊面</a>
+                    </div>
+                </div>
+                <div class="content-1 clearfix">
+                    <a href="#" class="img">
+                        <img src="images/tb1lc226-82.jpg"/>
+                        <div class="qdncover">
+                            <span class="name">黔东南馆</span>
+                        </div>
+                    </a>
+                    <div class="spec">
+                        <a href="#" class="hot">苏州苗绣</a>
+                        <a href="#">丹寨蜡染</a>
+                        <a href="#" class="hot">贵州腌肉</a>
+                        <a href="#">三穗鸭</a>
+                        <a href="#">黎平茶叶</a>
+                    </div>
+                </div>
+                <div class="content-1 clearfix">
+                    <a href="#" class="img">
+                        <img src="images/tb10sn-226-82.jpg"/>
+                        <div class="sncover">
+                            <span class="name">遂宁馆</span>
+                        </div>
+                    </a>
+                    <div class="spec">
+                        <a href="#" class="hot">太和豆豉</a>
+                        <a href="#">五更炉熏鸡射洪牛肉</a>
+                        <a href="#">糍粑块</a>
+                        <a href="#" class="hot">盆盆虾</a>
+                        <a href="#">香酥鸭</a>
+                    </div>
+                </div>
+                <div class="content-1 clearfix">
+                    <a href="#" class="img">
+                        <img src="images/tb1bg-226-82.jpg"/>
+                        <div class="bgcover">
+                            <span class="name">宝鸡馆</span>
+                        </div>
+                    </a>
+                    <div class="spec">
+                        <a href="#" >中蜂蜂蜜</a>
+                        <a href="#" class="hot">凤县大红袍花椒</a>
+                        <a href="#" class="hot">岐山挂面</a>
+                        <a href="#">岐山锅盔</a>
+                        <a href="#">眉县猕猴桃</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lazy-bx">
+            <div class="head">
+                <h1>
+                    <img src="images/tb1xxls-83-18.png"/>
+                </h1>
+                <div class="xxcd">
+                    <a href="#">天猫超市</a>
+                    <a href="#">天猫超市</a>
+                    <a href="#">天猫超市</a>
+                </div>
+                <!--<a href="#" class="changeBtn">-->
+                    <!--<span class="imgicon"></span>换一组-->
+                <!--</a>-->
+            </div>
+            <div class="contentbox clearfix">
+                <div class="xxls-box1">
+                    <a href="#">
+                        <img src="images/lspj274-338.jpg"/>
+                    </a>
+                </div>
+                <div class="lppzbox">
+                    <a href="imgdd">
+                        <img class="lppzdd" src="images/lppzdd.jpg" alt=""/>
+                        <p class="lptittle">【天猫超市】良品铺子卤香鹌鹑蛋128g 零食小吃卤蛋卤味铁蛋零食</p>
+                    </a>
+                    <div class="suibian">
+                        <div class="jiagebox">
+                            <p class="now">¥
+                                <span>17.90</span>
+                            </p>
+                            <p class="old">
+                                <s>¥17.90</s>
+                            </p>
+                        </div>
+                        <div class="soldnum">
+                            已售
+                            <span>65666</span>
+                            件
+                        </div>
+                    </div>
+                </div>
+                <div class="ydbox">
+                    <a href="imgdd">
+                        <img class="lppzdd" src="images/yd.jpg" alt=""/>
+                        <p class="lptittle">【天猫超市】箭牌益达至尊洁净冰柠40粒口香糖休闲零食 糖果</p>
+                    </a>
+                    <div class="suibian">
+                        <div class="jiagebox">
+                            <p class="now">¥
+                                <span>10.90</span>
+                            </p>
+                            <p class="old">
+                                <s>¥11.90</s>
+                            </p>
+                        </div>
+                        <div class="soldnum">
+                            已售
+                            <span>565463</span>
+                            件
+                        </div>
+                    </div>
+                </div>
+                <div class="szbox">
+                    <a href="imgdd">
+                        <img class="lppzdd" src="images/sz.jpg" alt=""/>
+                        <p class="lptittle">【天猫超市】良品铺子山楂片250g山楂干山楂零食果脯蜜饯特色小吃</p>
+                    </a>
+                    <div class="suibian">
+                        <div class="jiagebox">
+                            <p class="now">¥
+                                <span>19.90</span>
+                            </p>
+                            <p class="old">
+                                <s>¥27.90</s>
+                            </p>
+                        </div>
+                        <div class="soldnum">
+                            已售
+                            <span>66666</span>
+                            件
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--猜你喜欢-->
+        <div class="lazy-bx">
+            <div class="head">
+                <h1>
+                    <img src="images/cainixihuan.png"/>
+                </h1>
+                <!--<a href="#" class="changeBtn">-->
+                    <!--<span class="imgicon"></span>换一组-->
+                <!--</a>-->
+            </div>
+            <div class="contentbox clearfix">
+                <div class="caibox">
+                    <img class="pic" src="images/caidougan.jpg" alt=""/>
+                    <p class="cntittle">【天猫超市】徽记好巴食豆腐干麻辣味60g四川特产豆干休闲零食</p>
+                    <div class="cover">
+                        <p class="location">
+                            <img src="images/dingwei.png" alt=""/>
+                            <span> </span>
+                        </p>
+                        <p class="sub-tittle">【天猫超市】徽记好巴食豆腐干麻辣味60g四川特产豆干休闲零食</p>
+                        <div class="jiagebox">
+                            <p class="now">
+                                ￥
+                                <span> 2.50</span>
+                            </p>
+                            <p class="old">
+                                <s>￥3.00</s>
+                            </p>
+                        </div>
+                        <div class="soldnum">
+                            已售
+                            <span>8888</span>
+                            件
+                        </div>
+                        <p class="buy">
+                            <a href="#">立即购买</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="caibox">
+                    <img class="pic" src="images/caizhacai1.jpg" alt=""/>
+                    <p class="cntittle">重庆特产鱼泉一等品榨菜80g*10袋正宗榨菜丝新鲜美味下饭菜咸菜</p>
+                    <div class="cover">
+                        <p class="location">
+                            <img src="images/dingwei.png" alt=""/>
+                            <span> </span>
+                        </p>
+                        <p class="sub-tittle">重庆特产鱼泉一等品榨菜80g*10袋正宗榨菜丝新鲜美味下饭菜咸菜</p>
+                        <div class="jiagebox">
+                            <p class="now">
+                                ￥
+                                <span> 17.50</span>
+                            </p>
+                            <p class="old">
+                                <s>￥24.00</s>
+                            </p>
+                        </div>
+                        <div class="soldnum">
+                            已售
+                            <span>8888</span>
+                            件
+                        </div>
+                        <p class="buy">
+                            <a href="#">立即购买</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="caibox">
+                    <img class="pic" src="images/cailatiao.jpg" alt=""/>
+                    <p class="cntittle">鸽鸽豆角干辣条散称500g蒜香/麻辣休闲零食江西特产儿时手撕小吃</p>
+                    <div class="cover">
+                        <p class="location">
+                            <img src="images/dingwei.png" alt=""/>
+                            <span> </span>
+                        </p>
+                        <p class="sub-tittle">鸽鸽豆角干辣条散称500g蒜香/麻辣休闲零食江西特产儿时手撕小吃</p>
+                        <div class="jiagebox">
+                            <p class="now">
+                                ￥
+                                <span> 27.50</span>
+                            </p>
+                            <p class="old">
+                                <s>￥34.00</s>
+                            </p>
+                        </div>
+                        <div class="soldnum">
+                            已售
+                            <span>8888</span>
+                            件
+                        </div>
+                        <p class="buy">
+                            <a href="#">立即购买</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="caibox">
+                    <img  class="pic" src="images/caizhacai2.jpg" alt=""/>
+                    <p class="cntittle">重庆特产鱼泉榨菜丝特等品80g*20袋航空榨菜即食泡菜下饭菜包邮</p>
+                    <div class="cover">
+                        <p class="location">
+                            <img src="images/dingwei.png" alt=""/>
+                            <span> </span>
+                        </p>
+                        <p class="sub-tittle">重庆特产鱼泉榨菜丝特等品80g*20袋航空榨菜即食泡菜下饭菜包邮</p>
+                        <div class="jiagebox">
+                            <p class="now">
+                                ￥
+                                <span> 27.50</span>
+                            </p>
+                            <p class="old">
+                                <s>￥34.00</s>
+                            </p>
+                        </div>
+                        <div class="soldnum">
+                            已售
+                            <span>8888</span>
+                            件
+                        </div>
+                        <p class="buy">
+                            <a href="#">立即购买</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="caibox caibox1">
+                    <img  class="pic" src="images/caizhacai3.jpg" alt=""/>
+                    <p class="cntittle">5袋装 河南登封特产小苍娃精制芥丝芥菜丝嵩山小仓娃榨咸菜2500g</p>
+                    <div class="cover">
+                        <p class="location">
+                            <img src="images/dingwei.png" alt=""/>
+                            <span> </span>
+                        </p>
+                        <p class="sub-tittle">5袋装 河南登封特产小苍娃精制芥丝芥菜丝嵩山小仓娃榨咸菜2500g</p>
+                        <div class="jiagebox">
+                            <p class="now">
+                                ￥
+                                <span> 37.50</span>
+                            </p>
+                            <p class="old">
+                                <s>￥54.00</s>
+                            </p>
+                        </div>
+                        <div class="soldnum">
+                            已售
+                            <span>8888</span>
+                            件
+                        </div>
+                        <p class="buy">
+                            <a href="#">立即购买</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="caibox">
+                    <img  class="pic" src="images/caizhacai2.jpg" alt=""/>
+                    <p class="cntittle">湖南特产飞旺臭干子辣条 麻辣休闲小零食26g*10儿时面筋小吃辣片</p>
+                    <div class="cover">
+                        <p class="location">
+                            <img src="images/dingwei.png" alt=""/>
+                            <span> </span>
+                        </p>
+                        <p class="sub-tittle">湖南特产飞旺臭干子辣条 麻辣休闲小零食26g*10儿时面筋小吃辣片</p>
+                        <div class="jiagebox">
+                            <p class="now">
+                                ￥
+                                <span> 37.50</span>
+                            </p>
+                            <p class="old">
+                                <s>￥54.00</s>
+                            </p>
+                        </div>
+                        <div class="soldnum">
+                            已售
+                            <span>8888</span>
+                            件
+                        </div>
+                        <p class="buy">
+                            <a href="#">立即购买</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="caibox">
+                    <img  class="pic" src="images/caizhacai2.jpg" alt=""/>
+                    <p class="cntittle">焦大哥四川宜宾特产 老坛芽菜1000g 碎粒米型芽菜包邮1公斤装餐饮</p>
+                    <div class="cover">
+                        <p class="location">
+                            <img src="images/dingwei.png" alt=""/>
+                            <span> </span>
+                        </p>
+                        <p class="sub-tittle">焦大哥四川宜宾特产 老坛芽菜1000g 碎粒米型芽菜包邮1公斤装餐饮</p>
+                        <div class="jiagebox">
+                            <p class="now">
+                                ￥
+                                <span> 37.50</span>
+                            </p>
+                            <p class="old">
+                                <s>￥54.00</s>
+                            </p>
+                        </div>
+                        <div class="soldnum">
+                            已售
+                            <span>8888</span>
+                            件
+                        </div>
+                        <p class="buy">
+                            <a href="#">立即购买</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="caibox">
+                    <img  class="pic" src="images/caizhacai1.jpg" alt=""/>
+                    <p class="cntittle">瓶装腊八蒜绿色的蒜罐装醋泡蒜糖蒜糖醋蒜头山东特产金乡大蒜400G</p>
+                    <div class="cover">
+                        <p class="location">
+                            <img src="images/dingwei.png" alt=""/>
+                            <span> </span>
+                        </p>
+                        <p class="sub-tittle">瓶装腊八蒜绿色的蒜罐装醋泡蒜糖蒜糖醋蒜头山东特产金乡大蒜400G</p>
+                        <div class="jiagebox">
+                            <p class="now">
+                                ￥
+                                <span> 37.50</span>
+                            </p>
+                            <p class="old">
+                                <s>￥54.00</s>
+                            </p>
+                        </div>
+                        <div class="soldnum">
+                            已售
+                            <span>8888</span>
+                            件
+                        </div>
+                        <p class="buy">
+                            <a href="#">立即购买</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="caibox">
+                    <img  class="pic" src="images/cailatiao.jpg" alt=""/>
+                    <p class="cntittle">重庆武隆特产羊角不添加防腐剂香菇豆干500g小包散装卤香豆腐干</p>
+                    <div class="cover">
+                        <p class="location">
+                            <img src="images/dingwei.png" alt=""/>
+                            <span> </span>
+                        </p>
+                        <p class="sub-tittle">重庆武隆特产羊角不添加防腐剂香菇豆干500g小包散装卤香豆腐干</p>
+                        <div class="jiagebox">
+                            <p class="now">
+                                ￥
+                                <span> 37.50</span>
+                            </p>
+                            <p class="old">
+                                <s>￥54.00</s>
+                            </p>
+                        </div>
+                        <div class="soldnum">
+                            已售
+                            <span>8888</span>
+                            件
+                        </div>
+                        <p class="buy">
+                            <a href="#">立即购买</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="caibox caibox1">
+                    <img  class="pic" src="images/caidougan.jpg" alt=""/>
+                    <p class="cntittle">祖名香逗卷500g包邮豆腐卷纤层豆卷素肉豆腐干豆干制品零食品特产</p>
+                    <div class="cover">
+                        <p class="location">
+                            <img src="images/dingwei.png" alt=""/>
+                            <span> </span>
+                        </p>
+                        <p class="sub-tittle">祖名香逗卷500g包邮豆腐卷纤层豆卷素肉豆腐干豆干制品零食品特产</p>
+                        <div class="jiagebox">
+                            <p class="now">
+                                ￥
+                                <span> 37.50</span>
+                            </p>
+                            <p class="old">
+                                <s>￥54.00</s>
+                            </p>
+                        </div>
+                        <div class="soldnum">
+                            已售
+                            <span>8888</span>
+                            件
+                        </div>
+                        <p class="buy">
+                            <a href="#">立即购买</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--中华新字号-->
+        <div class="lazy-bx">
+            <div class="head">
+                <h1>
+                    <img src="images/xinzihao.png"/>
+                </h1>
+                <!--<a href="#" class="changeBtn">-->
+                    <!--<span class="imgicon"></span>换一组-->
+                <!--</a>-->
+            </div>
+        </div>
+        <!--中华老字号-->
+        <div class="lazy-bx">
+            <div class="head laozihao">
+                <h1>
+                    <img src="images/laozihao.png"/>
+                </h1>
+                <a href="#" class="changeBtn">
+                    <span class="imgicon"></span>换一组
+                </a>
+            </div>
+            <div class="old-old">
+                <ul class="old-list clearfix">
+                    <li class="oldss">
+                        <a href="#">
+                            <img src="images/haioubiao.png" alt=""/>
+                            <img class="littlepic" src="images/shoubiao.png" alt=""/>
+                        </a>
+                    </li>
+                    <li class="oldss">
+                        <a href="#">
+                            <img src="images/liubiju.png" alt=""/>
+                            <img class="littlepic" src="images/liubijujiang.png" alt=""/>
+                        </a>
+                    </li>
+                    <li class="oldss">
+                        <a href="#">
+                            <img src="images/qingdaopijiu.png" alt=""/>
+                            <img class="littlepic" src="images/qingdaojiu.png" alt=""/>
+                        </a>
+                    </li>
+                    <li class="oldss">
+                        <a href="#">
+                            <img src="images/liuweizhai.png" alt=""/>
+                            <img class="littlepic" src="images/liuweizhaia.png" alt=""/>
+                        </a>
+                    </li>
+                    <li class="oldss">
+                        <a href="#">
+                            <img src="images/daoxiaocun.png" alt=""/>
+                            <img class="littlepic" src="images/daoxiangcundian.png" alt=""/>
+                        </a>
+                    </li>
+                    <li class="oldss">
+                        <a href="#">
+                            <img src="images/wuyutai.png" alt=""/>
+                            <img class="littlepic" src="images/chaye.png" alt=""/>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="old-old old-old2">
+                <ul class="old-list clearfix">
+                    <li class="oldss">
+                        <a href="#">
+                            <img src="images/dabaituguanshengyuan.png" alt=""/>
+                            <img class="littlepic" src="images/dabaitu.png" alt=""/>
+                        </a>
+                    </li>
+                    <li class="oldss">
+                        <a href="#">
+                            <img src="images/tongrentang.png" alt=""/>
+                            <img class="littlepic" src="images/tongrentangejiao.png" alt=""/>
+                        </a>
+                    </li>
+                    <li class="oldss">
+                        <a href="#">
+                            <img src="images/guifaxiang.png" alt=""/>
+                            <img class="littlepic" src="images/mahua.png" alt=""/>
+                        </a>
+                    </li>
+                    <li class="oldss">
+                        <a href="#">
+                            <img src="images/wuyutai.png" alt=""/>
+                            <img class="littlepic" src="images/chaye.png" alt=""/>
+                        </a>
+                    </li>
+                    <li class="oldss">
+                        <a href="#">
+                            <img src="images/guyuelongshan.png" alt=""/>
+                            <img class="littlepic" src="images/guyuelongshanjiu.png" alt=""/>
+                        </a>
+                    </li>
+                    <li class="oldss">
+                        <a href="#">
+                            <img src="images/guanyunniurou.png" alt=""/>
+                            <img class="littlepic" src="images/niurou.png" alt=""/>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        <!--热门城市-->
+        <div class="lazy-bx">
+            <div class="head">
+                <h1>
+                    <img src="images/remenchengshi.png"/>
+                </h1>
+            </div>
+            <div class="city-bx clearfix">
+                <div class="citys">
+                    <a href="#" class="img">
+                        <img src="images/lvliang.jpg" alt=""/>
+                        <p class="cover">
+                            <span>吕梁</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="citys">
+                    <a href="#" class="img">
+                        <img src="images/chongyi.jpg" alt=""/>
+                        <p class="cover">
+                            <span>崇义</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="citys">
+                    <a href="#" class="img">
+                        <img src="images/jilin.jpg" alt=""/>
+                        <p class="cover">
+                            <span>吉林</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="citys">
+                    <a href="#" class="img">
+                        <img src="images/songxi.jpg" alt=""/>
+                        <p class="cover">
+                            <span>松溪</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="citys">
+                    <a href="#" class="img">
+                        <img src="images/chengdu.jpg" alt=""/>
+                        <p class="cover">
+                            <span>成都</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="citys">
+                    <a href="#" class="img">
+                        <img src="images/changji.jpg" alt=""/>
+                        <p class="cover">
+                            <span>昌吉</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="citys">
+                    <a href="#" class="img">
+                        <img src="images/jiyuan.jpg" alt=""/>
+                        <p class="cover">
+                            <span>济源</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="citys">
+                    <a href="#" class="img">
+                        <img src="images/zhanhua.jpg" alt=""/>
+                        <p class="cover">
+                            <span>沾化</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="citys">
+                    <a href="#" class="img">
+                        <img src="images/suizhou.jpg" alt=""/>
+                        <p class="cover">
+                            <span>随州</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="citys">
+                    <a href="#" class="img">
+                        <img src="images/wuhan.png" alt=""/>
+                        <p class="cover">
+                            <span>武汉</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="citys">
+                    <a href="#" class="img">
+                        <img src="images/tiantai.jpg" alt=""/>
+                        <p class="cover">
+                            <span>天台</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="citys">
+                    <a href="#" class="img">
+                        <img src="images/shenxian.jpg" alt=""/>
+                        <p class="cover">
+                            <span>莘县</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="citys">
+                    <a href="#" class="img">
+                        <img src="images/huainan.jpg" alt=""/>
+                        <p class="cover">
+                            <span>淮南</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="citys">
+                    <a href="#" class="img">
+                        <img src="images/shuangfeng.jpg" alt=""/>
+                        <p class="cover">
+                            <span>双峰</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="citys">
+                    <a href="#" class="img">
+                        <img src="images/hanzhong.jpg" alt=""/>
+                        <p class="cover">
+                            <span>汉中</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="morecitys">
+                    <a href="#">
+                        <span>更多</span>
+                        <p>402座城市已开启</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--卖家入驻申请-->
+        <div class="bottom-bx clearfix">
+            <a href="#" class="join">卖家入驻申请</a>
+        </div>
+    </div>
+<!--footer-->
+    <div class="footer">
+        <div class="footer1">
+            <p>
+                <a href="#">阿里巴巴集团</a>
+                <b>|</b>
+                <a href="#">阿里巴巴国际站</a>
+                <b>|</b>
+                <a href="#">阿里巴巴中国站</a>
+                <b>|</b>
+                <a href="#">全球速卖通</a>
+                <b>|</b>
+                <a href="#">淘宝网</a>
+                <b>|</b>
+                <a href="#">天猫网</a>
+                <b>|</b>
+                <a href="#">聚划算</a>
+                <b>|</b>
+                <a href="#">一淘网</a>
+                <b>|</b>
+                <a href="#">阿里妈妈</a>
+                <b>|</b>
+                <a href="#">淘宝旅行</a>
+                <b>|</b>
+                <a href="#">虾米</a>
+                <b>|</b>
+                <a href="#">阿里云计算</a>
+                <b>|</b>
+                <a href="#">云OS</a>
+                <b>|</b>
+                <a href="#">万网</a>
+                <b>|</b>
+                <a href="#">支付宝</a>
+                <b>|</b>
+                <a href="#">来往</a>
+            </p>
+        </div>
+        <div class="footer2">
+            <p>
+                <a href="#">关于淘宝</a>
+                <a href="#">合作伙伴</a>
+                <a href="#">营销中心</a>
+                <a href="#">廉政举报</a>
+                <a href="#">联系客服</a>
+                <a href="#">开放平台</a>
+                <a href="#">诚征英才</a>
+                <a href="#">联系我们</a>
+                <a href="#">网站地图</a>
+                <a href="#">法律声明</a>
+                <em>© 2016 Taobao.com 版权所有</em>
+            </p>
+        </div>
+    </div>
+</body>
+<script>
+    //整体需求：实现一个完整的轮播图，要有按钮 有左右箭头 和自动轮播效果
+    //先找元素
+    var timer = null;
+    var box = document.getElementById("box");
+    var screen = box.children[0];
+    var ul = screen.children[0];
+    var ol = screen.children[1];
+    var ulLis = ul.children;
+    var imgWidth = screen.offsetWidth;
+    //这里要找到箭头
+    var arr = document.getElementById("arr");
+    var left = document.getElementById("left");
+    var right = document.getElementById("right");
+    //-----动态生成结构
+    //----根据图片的数量生成按钮
+    for (var i=0;i<ulLis.length;i++){
+        //---在页面中生成li 并放进ol
+        var li = document.createElement("li");
+        //按钮的内容为索引加1，因为索引是从0开始
+        li.innerHTML = i+1;
+        //将生成的li加到ol中
+        ol.appendChild(li);
+    }
+    //----找到所有的按钮
+    var olLis = ol.children;
+    //----默认选中第一个
+    olLis[0].className="current";
+    //----克隆第一张图，放到最后，目的是形成无缝轮播,克隆的括号中写的是布尔值
+    var firstImg = ulLis[0].cloneNode(true);
+    ul.appendChild(firstImg);
+    //----鼠标经过按钮 排他
+    for (var j=0;j<olLis.length;j++){
+        //----先保存一下当前按钮的索引值
+        olLis[j].index = j;
+        //----给按钮添加点击事件，排他
+        olLis[j].onmouseover = function() {
+            //---干掉所有人
+            for (var k=0;k<olLis.length;k++){
+                olLis[k].className = "";
+            }
+            //---留下自己
+            this.className = "current";
+            //--------以动画的形式，让图片移动到相应位置，调用封装的函数
+            //--------先定义target，图片往右走，也就是整个大图往左 是负值
+            var target = -this.index *imgWidth;
+            //---调用
+            animate(ul,target);
+            //要把图片的当前索引和当前小按钮的索引都统一
+            pic = this.index;
+            square = this.index;
+        }
+    }
+    //---------箭头箭头箭头！显示、隐藏、点击。
+    //---鼠标经过盒子显示，离开隐藏
+    box.onmouseover  = function() {
+        arr.style.display = "block";
+        //当鼠标放上的时候 停止滚动 也就是清一下定时器
+        clearInterval(timer);
+    }
+    box.onmouseout = function() {
+        arr.style.display= "none";
+        //当鼠标离开的时候重新滚动,设定定时器setinterval（函数，时间间隔）
+        timer =  setInterval(right.onclick,3000);
+    }
+    //点击右箭头，以动画形式移动图片到相应位置
+    //先声明变量 把当前显示的图片的索引 和 当前按钮的索引记录下来
+    var pic = 0 ;
+    var square = 0 ;
+    //---给左右箭头按钮添加点击事件
+    right.onclick= function() {
+        //---先判断 如果当前是最后一张图片，就跳到第一个，索引也跟着跳
+        if(pic=== ulLis.length-1){
+            ul.style.left = 0;
+            pic = 0;
+        }
+        pic++;//否否则一直前进，当前图片的index++
+        //添加动画
+        var target = -pic *imgWidth;
+        animate(ul,target);
+        //-----按钮也要相应的排他跟着动
+        //---还是要判断
+        if(square< olLis.length-1){
+            square++;
+        }else {
+            square = 0 ;
+        }
+        //----排他
+        for (var i=0;i<olLis.length;i++){
+            //干掉所有人
+            olLis[i].className = "";
+        }
+        //留下自己
+        olLis[square].className = "current";
+    };
+    left.onclick = function () {
+        //先判断 如果是第一个图片 先让ul瞬间跳到最后的位置 然后索引也要到最后
+        if (pic === 0) {
+            ul.style.left = -(ulLis.length - 1) * imgWidth + "px";
+            pic = ulLis.length - 1;//索引也要归零
+        }
+        pic--;
+        //设置动画
+        var target = -pic * imgWidth;
+        animate(ul, target);
+        if (square > 0) {
+            square--;
+        } else {
+            square = olLis.length - 1;
+        }
+        //干掉所有人
+        for (var i = 0; i < olLis.length; i++) {
+            olLis[i].className = "";
+        }
+        //留下自己
+        olLis[square].className = "current";
+    };
+    //----设置一个自动播放
+    timer = setInterval(right.onclick, 3000);
+    //----动画函数封装
+    function animate(obj, target) {
+        //---定时器不能共用一个，只能用该盒子专属的timer
+        clearInterval(obj.timer);
+        obj.timer = setInterval(function () {
+            var step = 30 ;
+            var leader = obj.offsetLeft;
+            step = leader < target ? step : - step;
+            if (Math.abs(leader-target)>=Math.abs(step)) {
+                leader = leader + step;
+                obj.style.left = leader + "px";
+            } else {
+                obj.style.left = target + "px";
+                clearInterval(obj.timer);
+            }
+        }, 15);
+    }
+
+</script>
+</html>
