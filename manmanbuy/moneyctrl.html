@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+     <!-- 设置手机端 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+     <!-- 引入第三方的框架 -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <!-- 引入此页面css文件 -->
+     <link rel="stylesheet/less" href="css/base.less">
+    <link rel="stylesheet/less" href="css/index.less">
+    <link rel="stylesheet/less" href="css/moneyctrl.less">
+    <!-- 引入编译less的文件 -->
+    <script src="lib/less/less.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<!-- head start -->
+    <div class="head">
+        <ul class="one">
+            <li class="first"><a href="index.html"><img class="left_arrow" src="images/left_arrow.svg"></a></li>
+            <li class="middle"><h5>省钱控-最新优惠</h5></li>
+            <li class="last"><a href="#"><img src="images/header_app.png" alt=""></a></li>
+        </ul>
+    </div>
+<!-- product start -->
+    <div class="product_list">
+     <script type="text/html" id="prolist">
+      {{each result as value i}}
+        <div class="product">
+            <div class="product_l clearfix">
+                <a href="#">
+                    {{#value.productImgSm}}
+                </a>
+                <div class="product_text">
+                    <h5><a href="#">{{value.productName}}</h5></a>
+                    <p>{{value.productPinkage}}</p>
+                    <span class="shop">{{value.productFrom}} | {{value.productTime}}</span>
+                    <span class="comment">
+                        <img src="images/comment.svg" >
+                        {{value.productComCount.replace("有","").replace('人评论',"")}}
+                    </span>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    </div>
+<!-- select start -->
+    <div class="select clearfix">
+        <div class="one">
+            <a href="#">上一页</a>
+        </div>
+        <select class="two">
+            <option value="">
+                <a href="#" id="opnum">1/14</a>
+            </option>
+        </select>
+        <div class="three">
+            <a href="#">下一页</a>
+        </div>
+    </div>
+<!-- footer start -->
+    <div class="footer">
+        <ul class="footer_top">
+            <li>登录</li>
+            <li class="li2">注册</li>
+            <li><img src="images/top.jpg" alt="">返回顶部</li>
+        </ul>
+        <div class="footer_bottom">
+            <a class="red" href="#">手机APP下载</a>
+            <a href="#">慢慢买手机版</a>
+             -- 掌上比价平台
+        </div>
+        <p class="last">m.manmanbuy.com </p>
+    </div>
+<!-- js -->
+ <!-- 先引入jquery  Bootstrap依赖jquery-->
+    <script src="lib/jquery/jquery.js"></script>
+    <!-- 后引入Bootstrap的js文件 -->
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <script src="js/template.js"></script>
+  <!--  引入此页面ajax.js 文件 -->
+   <script src="js/moneyctrl_ajax.js"></script>
+</body>
+</html>

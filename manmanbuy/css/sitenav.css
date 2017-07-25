@@ -1,0 +1,85 @@
+.head {
+  width: 100%;
+  height: 50px;
+  background-color: #FF841D;
+  overflow: hidden;
+  padding: 0px 12px;
+}
+.head .arrow1 {
+  float: left;
+  height: 34px;
+  margin: 10px auto;
+}
+.head .arrow2 {
+  float: right;
+  height: 34px;
+  margin: 10px auto;
+}
+.head h1 {
+  font-size: 20px;
+  text-align: center;
+  line-height: 50px;
+  margin: 0px;
+  font-weight: 700;
+  width: 75%;
+  float: left;
+  color: white;
+}
+/* main nav start */
+.shopnav {
+  overflow: hidden;
+}
+.shopnav .shopul {
+  padding: 5px 10px 10px 10px ;
+}
+.shopnav .shopul .shopli {
+  height: 35px;
+  float: left;
+  border: 1px solid #bfbfbf;
+  background-color: #F4F4F4;
+  padding: 5px 8px;
+  margin-top: 5px;
+  margin-right: 5px;
+}
+.shopnav .shopul .shopli img {
+  margin-right: 10px;
+}
+.shopnav .shopul .shopli a {
+  font-size: 16px;
+  line-height: 23px;
+}
+/* footer start */
+.footer {
+  height: 30px;
+  width: 100%;
+  line-height: 30px;
+}
+.footer ul {
+  margin-top: 13px;
+  height: 30px;
+}
+.footer li {
+  float: left;
+  width: 33.333%;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+}
+.footer .li2 {
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+.footer li img {
+  max-height: 15px;
+}
+.footer_bottom {
+  text-align: center;
+  font-size: 11px;
+}
+.red {
+  color: red;
+}
+.last {
+  text-align: center;
+  font-size: 11px;
+}

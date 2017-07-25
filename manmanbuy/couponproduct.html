@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+     <!-- 设置手机端 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+     <!-- 引入第三方的框架 -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+     <link rel="stylesheet" href="./lib/swiper/swiper-3.4.2.min.css">
+    <!-- 引入此页面css文件 -->
+    <link rel="stylesheet/less" href="css/base.less">
+    <link rel="stylesheet/less" href="css/couponproduct.less">
+    <!-- 引入编译less的文件 -->
+    <script src="lib/less/less.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<!-- head start -->
+    <div class="head clearfix">
+        <a href="coupon.html"><img src="images/left_arrow.svg" class="arrow1"></a>
+        <h1>优惠券</h1>
+        <img src="images/header_app.png" class="arrow2">
+    </div>
+    <!-- main nav start -->
+    <div class="bodya">
+
+            <div class="topbox">
+                 --点餐前出示手机中的优惠券，即可享受优惠--
+            </div>
+        <script type="text/html" id="youhuilist">
+        {{each result as value i }}
+        <div class="bigbox clearfix">
+            <div class="mianbox clearfix">
+                <div class="imga">
+                    {{#value.couponProductImg}}
+                </div>
+                <div class="img_right">
+                    <p class="p1"><a href="#">{{value.couponProductName}}</a></p>
+                    <b class="p2">{{value.couponProductPrice}}</b>
+                </div>
+                <div class="arrow">
+                    <img src="images/arrow-right.svg" >
+                </div>
+            </div>
+            <div class="bottom">
+                <p class="time">{{value.couponProductTime}}</p>
+            </div>
+        </div>
+        {{/each}}
+        </script>
+    </div>
+<!-- cover start -->
+    <div class="maximg">
+        <div class="cover swiper-container">
+            <div class="coverimg swiper-wrapper">
+            <script type="text/html" id="coverlist">
+                {{each result as value i }}
+                <div class="img swiper-slide">
+                    {{#value.couponProductImg}}
+                </div>
+                {{/each}}
+            </script>
+            </div>
+        </div>
+    </div>
+<!-- footer start -->
+    <div class="footer">
+        <ul class="footer_top">
+            <li>登录</li>
+            <li class="li2">注册</li>
+            <li><img src="images/top.jpg" alt="">返回顶部</li>
+        </ul>
+        <div class="footer_bottom">
+            <a class="red" href="#">手机APP下载</a>
+            <a href="#">慢慢买手机版</a>
+             -- 掌上比价平台
+        </div>
+        <p class="last">m.manmanbuy.com </p>
+    </div>
+<!-- js -->
+ <!-- 先引入jquery  Bootstrap依赖jquery-->
+    <script src="lib/jquery/jquery.js"></script>
+    <!-- 引入swiper -->
+    <script src="lib/swiper/swiper-3.4.2.min.js"></script>
+    <!-- 后引入Bootstrap的js文件 -->
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <script src="js/template.js"></script>
+  <!--  引入此页面ajax.js 文件 -->
+   <script src="js/couponproduct_ajax.js"></script>
+</body>
+</html>

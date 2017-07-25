@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+     <!-- 设置手机端 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+     <!-- 引入第三方的框架 -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <!-- 引入此页面css文件 -->
+    <link rel="stylesheet/less" href="css/base.less">
+    <link rel="stylesheet/less" href="css/gsproduct.less">
+    <!-- 引入编译less的文件 -->
+    <script src="lib/less/less.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<!-- head start -->
+    <div class="head clearfix">
+        <a href="index.html"><img src="images/left_arrow.svg" class="arrow1"></a>
+        <h1>凑单品</h1>
+        <img src="images/header_app.png" class="arrow2">
+    </div>
+<!-- main nav start -->
+    <div class="bigbox clearfix">
+        <div class="navbox">
+            <select name="" class="shopbox">
+                <script type="text/html" id="shop">
+                {{each result as value i }}
+                <option value="{{value.shopId}}">{{value.shopName}}</option>
+                {{/each}}
+                </script>
+            </select>
+            <select name="" class="areabox">
+            <script type="text/html" id="area">
+                {{each result as value i }}
+                <option value="{{value.areaId}}">{{value.areaName}}</option>
+                {{/each}}
+                </script>
+            </select>
+            <select name="">
+                <option value="">全部价格</option>
+            </select>
+        </div>
+        <div class="bodylist clearfix">
+            <ul class="productajax">
+             <script type="text/html" id="pro">
+                {{each result as value i }}
+                <li proid="{{value.productId}}">
+                    <a href="#">
+                        <img src="{{#value.productImg}}" alt="">
+                        <p class="pp">{{value.productName}}</p>
+                        <div class="other clearfix">
+                            <span class="qian">{{value.productPrice}}</span>
+                            <span class="btn">去凑单</span>
+                        </div>
+                    </a>
+                </li>
+                {{/each}}
+            </script>
+            </ul>
+        </div>
+    </div>
+<!-- footer start -->
+    <div class="footer">
+        <ul class="footer_top">
+            <li>登录</li>
+            <li class="li2">注册</li>
+            <li><img src="images/top.jpg" alt="">返回顶部</li>
+        </ul>
+        <div class="footer_bottom">
+            <a class="red" href="#">手机APP下载</a>
+            <a href="#">慢慢买手机版</a>
+             -- 掌上比价平台
+        </div>
+        <p class="last">m.manmanbuy.com </p>
+    </div>
+<!-- js -->
+ <!-- 先引入jquery  Bootstrap依赖jquery-->
+    <script src="lib/jquery/jquery.js"></script>
+    <!-- 后引入Bootstrap的js文件 -->
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <script src="js/template.js"></script>
+  <!--  引入此页面ajax.js 文件 -->
+   <script src="js/gsproduct_ajax.js"></script>
+</body>
+</html>

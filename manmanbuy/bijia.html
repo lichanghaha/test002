@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+     <!-- 设置手机端 -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+     <!-- 引入第三方的框架 -->
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <!-- 引入此页面css文件 -->
+     <link rel="stylesheet/less" href="css/base.less">
+    <link rel="stylesheet/less" href="css/index.less">
+    <link rel="stylesheet/less" href="css/bijia.less">
+    <!-- 引入编译less的文件 -->
+    <script src="lib/less/less.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<!-- head start -->
+    <div class="head">
+        <div class="logo">
+            <a href="#"><img src="images/header_logo.png" /></a>
+        </div>
+        <div class="down">
+            <a href="#"><img src="images/header_app.png" /></a>
+        </div>
+    </div>
+<!-- search start -->
+    <div class="search">
+        <form action="index_submit" method="get" accept-charset="utf-8">
+            <input id="search_l" type="search" name="" placeholder="输入您想比价的商品">
+            <input id="search_r" type="submit" name=""
+            value="搜索">
+        </form>
+    </div>
+<!-- 分级导航 -->
+    <div class="topnav">
+    <!--  <script type="text/html" id="tvtitle">
+        {{each result as value i}} -->
+        <ul>
+            <li><a href="#">首页&nbsp;&gt;</a></li>
+            <li><a href="#" class="tv1">电视&nbsp;&gt;</a></li>
+            <li><a href="#"><!-- {{value.category}} -->什么玩意</a></li>
+            <li class="topnav_r"><a href="#">筛选</a></li>
+        </ul>
+   <!--      {{/each}}
+    </script> -->
+    </div>
+<!-- 产品块 -->
+    <div class="mainproduct">
+     <script type="text/html" id="tabll">
+     {{each result as value i}}
+        <div class="productName">
+            <h5>{{value.productName}}</h5>
+        </div>
+        <div class="productImg">
+            <a href="#">{{#value.productImg}}</a>
+        </div>
+        <div class="btns clearfix">
+            <div class="left">
+                <a href="#">比价购买</a>
+            </div>
+            <div class="middle">
+                <a href="#">产品参数</a>
+            </div>
+            <div class="right">
+                <a href="#">评价（1234）</a>
+            </div>
+        </div>
+        <!-- ajax -->
+       <div class="tablecss">
+            {{#value.bjShop}}
+       </div>
+        <div class="fonts">
+        *实际价格一个网站列出的实时售价为准，我们提供的加个可能有数小时至数日的延迟。
+        </div>
+        {{/each}}
+        </script>
+    </div>
+     <div class="pjtitle">
+            网友评价
+    </div>
+    <div class="pingjia">
+    <script type="text/html" id="plid">
+     {{each result as value i}}
+        <div class="pjbox clearfix">
+            <div class="pjnav clearfix">
+                <span class="pjname">{{value.comName}}</span>
+                <span class="pjtime">{{value.comTime}}</span><br/>
+                <span class="pjshop">{{value.comFrom}}</span>
+            </div>
+            <div class="pjmain">
+                {{value.comContent}}
+            </div>
+        </div>
+        {{/each}}
+        </script>
+    </div>
+    <div class="pjmore">
+        <div><a href="#">查看更多评价</a></div>
+    </div>
+
+
+
+
+
+
+<!-- footer start -->
+    <div class="footer">
+        <ul class="footer_top">
+            <li>登录</li>
+            <li class="li2">注册</li>
+            <li><img src="images/top.jpg" alt="">返回顶部</li>
+        </ul>
+        <div class="footer_bottom">
+            <a class="red" href="#">手机APP下载</a>
+            <a href="#">慢慢买手机版</a>
+             -- 掌上比价平台
+        </div>
+        <p class="last">m.manmanbuy.com </p>
+    </div>
+<!-- js -->
+ <!-- 先引入jquery  Bootstrap依赖jquery-->
+    <script src="lib/jquery/jquery.js"></script>
+    <!-- 后引入Bootstrap的js文件 -->
+    <script src="lib/bootstrap/js/bootstrap.js"></script>
+    <script src="js/template.js"></script>
+  <!--  引入此页面ajax.js 文件 -->
+   <script src="js/bijia_ajax.js"></script><!--
+    <script src="js/product_ajax.js"></script> -->
+</body>
+</html>

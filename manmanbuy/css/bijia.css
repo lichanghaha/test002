@@ -1,0 +1,144 @@
+.topnav {
+  width: 100%;
+  height: 36px;
+  background-color: #f5f5f5;
+}
+.topnav ul {
+  margin-bottom: 0px;
+}
+.topnav li {
+  float: left;
+  margin-left: 12px;
+  line-height: 36px;
+}
+.topnav .topnav_r {
+  float: right;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 12px;
+  width: 54px;
+  height: 30px;
+  background-color: white;
+  line-height: 30px;
+  text-align: center;
+  margin-top: 3px;
+}
+/* 主要商品块 */
+.mainproduct {
+  width: 100%;
+  background-color: white;
+  text-align: center;
+  position: relative;
+  /* ajax替代 */
+}
+.mainproduct .productName {
+  margin: 0 auto;
+  padding-top: 16px;
+}
+.mainproduct .productName h5 {
+  margin: 0px;
+  padding: 0px 15px 0px 15px;
+  font-size: 17px;
+  line-height: 25px;
+}
+.mainproduct .productImg img {
+  height: 170px;
+}
+.mainproduct .productImg .save {
+  position: absolute;
+  right: 6%;
+  bottom: 140px;
+  max-height: 39px;
+}
+.mainproduct .btns div {
+  float: left;
+  width: 33.333333%;
+  height: 30px;
+  background-color: #FFC72F;
+  border: 1px solid #C35102;
+  text-align: center;
+  line-height: 30px;
+  border-left: 0px;
+}
+.mainproduct .btns div a {
+  color: white;
+}
+.mainproduct .btns .right {
+  border-right: 0px;
+  background-color: #FF9E20;
+}
+.mainproduct ul {
+  height: 32px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 6px;
+  margin-bottom: 0px;
+}
+.mainproduct ul .shangjia {
+  float: left;
+  padding: 5px 12px 5px 12px;
+}
+.mainproduct ul .jiaqian {
+  width: 160px;
+  height: 24px;
+  float: right;
+  margin-top: 6px;
+  margin-bottom: 6px;
+}
+.mainproduct ul .jiaqian .goumai {
+  background-color: #FF5500;
+  border-radius: 5px;
+  padding: 3px 12px 5px 12px;
+  color: white;
+}
+.mainproduct ul .jiaqian span {
+  float: left;
+  margin-right: 12px;
+  height: 24px;
+}
+.mainproduct .fonts {
+  font-size: 12px;
+  line-height: 24px;
+  color: #ccc;
+}
+/* 评价 */
+.pjtitle {
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  background-color: #DBDBDB;
+  text-align: center;
+}
+.pingjia {
+  background-color: white;
+}
+.pingjia .pjbox {
+  background-color: white;
+  padding: 15px 12px 15px 12px;
+  border-bottom: 1px solid #666;
+}
+.pingjia .pjbox .pjnav span {
+  float: left;
+  font-size: 12px;
+  color: #666;
+}
+.pingjia .pjbox .pjnav .pjtime,
+.pingjia .pjbox .pjnav .pjshop {
+  float: right;
+}
+.pingjia .pjbox .pjmain {
+  margin-top: 15px;
+  font-size: 13px;
+  text-indent: 28px;
+}
+.pjmore {
+  width: 100%;
+  padding: 10px;
+}
+.pjmore div {
+  height: 35px;
+  border-radius: 10px;
+  background-color: #E4E4E4;
+  text-align: center;
+  line-height: 35px;
+  font-size: 16px;
+}
